@@ -1,0 +1,153 @@
+/*********************************/
+/*********************************/
+/********** Sommaire *************/
+/********** 1.Général ************/
+/********** 2.Menu ***************/
+/********** 3.Chiffre ************/
+/********** 4.Calendrier *********/
+/**********	5.Dernières action ***/
+/**********	6.Tchat **************/
+
+/*********************************/
+/*********************************/
+
+/* 1.Général */
+#box {
+  padding: 30px;
+  overflow: scroll;
+  word-wrap: break-word;
+  height: 60em;
+}
+
+/* 2.Menu */
+
+
+/* 3.Chiffre du mois */
+
+/* 4.Calendrier */
+#calendar {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#toggler {
+  position: fixed;
+  right: -2%;
+  top: 70%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+
+#toggler:hover {
+  position: fixed;
+  right: 0%;
+  top: 70%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+
+#toggle {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 998;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+#dash {
+  position: fixed;
+  right: -2%;
+  top: 40%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+
+#dash:hover {
+  position: fixed;
+  right: 0%;
+  top: 40%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+
+/* 5.Dernières actions */
+#todo {
+  position: fixed;
+  right: -2%;
+  top: 50%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+#todo:hover {
+  position: fixed;
+  right: 0%;
+  top: 50%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;  
+}
+
+/* 6.Tchat */
+#tchat {
+  position: fixed;
+  right: -2%;
+  top: 60%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;
+}
+
+#tchat:hover {
+  position: fixed;
+  right: 0%;
+  top: 60%;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-bottom: 2em;
+  padding-right: 1em;
+  border-top-left-radius: 15%;
+  border-bottom-left-radius: 15%; 
+  text-decoration: none;
+  z-index: 999;  
+}
+
+/*** Reste à en mettre en place la suppression 
+de la messagerie en version mobile ***/

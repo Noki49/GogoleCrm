@@ -1,0 +1,20 @@
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
+
+{% block body %}
+    <h2 class="text-center">Créer un contact</h2>
+    <div class="row">
+    	<div class="col-md-offset-5">
+			{{ form_start(form) }}
+				<p>{{ form_row(form.nomContact) }}</p>
+				<p>{{ form_row(form.prenomContact) }}</p>
+				<p>{{ form_row(form.eMailContact) }}</p>
+				<p>{{ form_row(form.telContact) }}</p>
+				<p>{{ form_row(form.commentaireContact) }}</p>
+				<p>{{ form_row(form.dateDeNaissanceContact) }}</p>
+				<p>{{ form_row(form.societe) }}</p>
+				<p>{{ form_row(form.categorieContact) }}</p>
+				<input type="submit" class="btn btn-default" value="Créer" />
+			{{ form_end(form) }}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
+
+{% block body -%}
+    <h2 class="text-center">Liste des sociétés</h2>
+
+    <br />
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <a href="{{ path('societe_new') }}">
+            	<input type="button" class="btn btn-default" value="Créer société"></input>
+            </a>
+
+            <br />
+            
+            <table class="table table-hover">
+                <tr>
+                    <th>Nom</th>
+                    <th>Siret</th>
+                    <th>E-mail</th>
+                    <th>Téléphone</th>
+                    <th>Actions</th>
+                </tr>
+                    
+                    
+                {% for entity in entities %}
+                    <tr>
+                    {#{	<td><a href="{{ path('societe_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td> }#}
+                        <td>{{ entity.nomSociete }}</td>
+                        <td>{{ entity.siretSociete }}</td>
+                        <td>{{ entity.eMailSociete }}</td>
+                        <td>{{ entity.telSociete }}</td>
+                        <td>
+            				<table name="action">	
+                                <tr>
+            						<td>
+                                    	<a href="{{ path('societe_show', { 'id': entity.id }) }}"><input type="button" class="btn btn-default" value="Afficher" /></a>
+                                	</td>
+                                	<td>
+                                    	<a href="{{ path('societe_edit', { 'id': entity.id }) }}"><input type="button" class="btn btn-default" value="Modifier" /></a>
+                                	</td>
+            						<td>
+            							{{ form(boutonDelete[entity.id]) }}
+            						</td>
+            				    </tr>
+                            </table>
+            			</td>
+                    </tr>
+                {% endfor %}
+                    
+            </table>
+
+            <br />
+
+            <a href="{{ path('societe_new') }}">
+                <input type="button" class="btn btn-default" value="Créer société"></input>
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+        <html>
+                <head>
+                        <meta charset="utf-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>Gogole CRM</title>
+                        <meta name="description" content="Gogole CRM">
+                        {% include'GogoleMainBundle:Main:stylesheet.html.twig' %}       
+                </head>
+		<body>
+			<div class="container-fluid">
+                                <div class="row">
+                                        {% include 'GogoleMainBundle:Main:menu.html.twig' %}
+                                </div>
+				{% block body %}
+		
+				{% endblock %}
+			</div>
+                        {% include'GogoleMainBundle:Main:script.html.twig' %}
+		</body>
+	</html>

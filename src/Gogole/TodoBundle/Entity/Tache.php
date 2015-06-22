@@ -70,6 +70,7 @@ class Tache
         $this->dateCreation = new \dateTime;
         $this->etat = false;
         $this->utilisateur = $utilisateur;
+
         
     }
 
@@ -212,7 +213,6 @@ class Tache
     {
         return $this->utilisateur;
     }
-
 
 
 }

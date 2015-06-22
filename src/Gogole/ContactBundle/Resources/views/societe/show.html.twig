@@ -1,0 +1,38 @@
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
+
+{% block body %}
+    <h2 class="text-center">Fiche d'une société</h2>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <table class="table">
+                    {#{<tr><th>Id</th><td>{{ entity.id }}</td></tr>}#}
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ entity.nomSociete }}</td>
+                    </tr>
+                    <tr>
+                        <th>Siret</th>
+                        <td>{{ entity.siretSociete }}</td>
+                    </tr>
+                    <tr>
+                        <th>E-mail</th>
+                        <td>{{ entity.eMailSociete }}</td>
+                    </tr>
+                    <tr>
+                        <th>Téléphone</th>
+                        <td>{{ entity.telSociete }}</td>
+                    </tr>
+                
+            </table>
+
+            <a href="{{ path('societe') }}">
+                <input type="button" class="btn btn-default" value="Retour" />
+            </a>
+            <a href="{{ path('societe_edit', { 'id': entity.id }) }}">
+                <input type="button" class="btn btn-default" value="Modifier" />
+            </a>
+            <br />
+            {{ form(delete_form) }}
+        </div>
+    </div>
+{% endblock %}

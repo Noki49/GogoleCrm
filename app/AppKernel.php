@@ -17,9 +17,15 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Gogole\MainBundle\GogoleMainBundle(),
+<<<<<<< HEAD
             new Gogole\TodoBundle\GogoleTodoBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new Gogole\UserBundle\GogoleUserBundle(),
+=======
+	        new Gogole\TchatBundle\GogoleTchatBundle(),
+	        new Gogole\TodoBundle\GogoleTodoBundle(),
+	        new Gogole\ContactBundle\GogoleContactBundle(),
+>>>>>>> upstream/master
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

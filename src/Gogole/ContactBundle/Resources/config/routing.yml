@@ -1,0 +1,3 @@
+gogole_contact_homepage:
+    path:     /main/
+    defaults: { _controller: GogoleContactBundle:Contact:index }

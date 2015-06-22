@@ -9,23 +9,30 @@ use Gogole\TodoBundle\Form\FormModifieTacheType;
 use Gogole\TodoBundle\Form\FormCreeTacheType;
 /* les entité */
 use Gogole\TodoBundle\Entity\Tache;
+
 use Gogole\UserBundle\Entity\User;
+
 
 class TodoController extends Controller
 {
 
-/***************************************************** affiche de toutes les taches ***********************************************************************/
+
+/***************************************************** affiche toutes les taches ***********************************************************************/
+
 	
 	// fonction qui permet d afficher toutes les taches
 
     public function listeTacheAction() // fonction qui envoi vers la page ou il y a toute les listes
     {
+
         $tacheActuelle = array(); 
+
         $tacheTerminer = array(); 
         $cpt = 0;
 
     	$em = $this->getDoctrine()->getManager(); // on donne a la variable $em les droit pour gerer la base de donnees
     	$uneTache = $em->getRepository("GogoleTodoBundle:Tache"); // $em pointe sur la table tache
+
 
 
  // cette ligne permet de recuperer le numero de l utilisateur connecter
@@ -64,6 +71,7 @@ class TodoController extends Controller
             ));
         } 
         else {return $this->redirect($this->generateUrl('fos_user_registration_register'));}
+
     }
 
 
@@ -73,12 +81,13 @@ class TodoController extends Controller
 
     public function creeTacheAction(Request $request)
     {
+
         $user = $this->container->get('security.context')->getToken()->getUser();// cette ligne permet de recuperer le numero de l utilisateur connecter
 
 
     	$em = $this->getDoctrine()->getManager(); // on donne a la variable $em les droit pour gerer la base de donnees
     	$tache =new Tache($user); // creation d un objet tache vide qui va beintot recevoir le retour du formulaire
-        
+
     	// creation du formulaire
 
     	$formulaire = $this->get("form.factory")->create(new formCreeTacheType(),$tache);
@@ -160,5 +169,7 @@ class TodoController extends Controller
 
     }
 
+    
 
 }
+
