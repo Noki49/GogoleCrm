@@ -1,0 +1,3 @@
+gogole_main_homepage:
+    path:     /hello
+    defaults: { _controller: GogoleMainBundle:Main:index }

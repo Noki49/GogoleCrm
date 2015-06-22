@@ -1,0 +1,4 @@
+services:
+#    gogole_user.example:
+#        class: Gogole\UserBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
