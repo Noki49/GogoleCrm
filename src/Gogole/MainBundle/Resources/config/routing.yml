@@ -1,16 +1,8 @@
 gogole_main_homepage:
-<<<<<<< HEAD
-    path:     /hello
-    defaults: { _controller: GogoleMainBundle:Main:index }
-=======
     path:     /
-<<<<<<< HEAD
     defaults: { _controller: GogoleTchatBundle:Tchat:main }
 
 gogole_main_homepage:
     path:   /
-    defaults: { _controller: GogoleTodoBundle:Todo:main }
->>>>>>> upstream/master
-=======
     defaults: { _controller: GogoleMainBundle:Main:index }
->>>>>>> b864060a26883e8e2e2817d9a79a22db3122f7ce
+
