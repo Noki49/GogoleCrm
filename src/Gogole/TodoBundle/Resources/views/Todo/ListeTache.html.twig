@@ -17,7 +17,7 @@
 					<th>Votre tache</th>
 					<th>Date d'échéance</th>
 				</tr>
-        		{% for uneTache in tache_encourt %}
+        		{% for uneTache in tache_actuelle %}
 	        		<tr>        				
 	    				<td>{{ uneTache.dateCreation|date('d/m/Y') }}</td>
 			           	<td>{{ uneTache.tache }}</td>

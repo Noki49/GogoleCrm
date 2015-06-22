@@ -1,6 +1,6 @@
 gogole_main_homepage:
     path:     /
-    defaults: { _controller: GogoleTchatBundle:Tchat:main }
+    defaults: { _controller: GogoleTchatBundle:Tchat:tchat }
 
 gogole_main_homepage:
     path:   /

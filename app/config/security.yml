@@ -21,12 +21,12 @@ security:
                 use_forward:	false
                 check_path: 	fos_user_security_check
                 failure_path:	null
-                default_target_path: /
+                default_target_path: /main/
                 remember_me : 	true
             remember_me:
                 key: 	  		%secret%
                 lifetime: 		300000000
-                path:     		/
+                path:     		/main/
                 domain:   		~
             logout:       true 		
             anonymous:    true
