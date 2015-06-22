@@ -6,19 +6,11 @@ imports:
 # Put parameters here that don't need to change on each machine where the app is deployed
 # http://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-<<<<<<< HEAD
     locale: fr
 
 framework:
     #esi:             ~
-    translator:      { fallbacks: fr_fr }
-=======
-    locale: en
-
-framework:
-    #esi:             ~
-    #translator:      { fallbacks: ["%locale%"] }
->>>>>>> upstream/master
+    translator:      { fallbacks: ["%locale%"] }
     secret:          "%secret%"
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -86,7 +78,6 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-<<<<<<< HEAD
 
 fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
@@ -95,5 +86,4 @@ fos_user:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-=======
->>>>>>> upstream/master
+
