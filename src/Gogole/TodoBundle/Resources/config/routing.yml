@@ -1,5 +1,5 @@
 gogole_todo_homepage:  # chemin vers l affiche de toutes les taches 
-    path:     /
+    path:     /todo/
     defaults: { _controller: GogoleTodoBundle:Todo:listeTache }
 
 gogole_todo_creationTache: # chemin vers la page de creation de tache 
