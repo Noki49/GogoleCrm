@@ -1,0 +1,56 @@
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
+
+{% block body %}
+    <h2 class="text-center">Fiche du contact</h2>
+
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8 col-md-offset-2">
+            <table class="table">
+            
+        	   {#{<tr><th>Id</th><td>{{ entity.id }}</td></tr>}#}
+                    <tr>
+                        <th>Nom</th>
+                        <td>{{ entity.nomContact }}</td>
+                    </tr>
+                    <tr>
+                        <th>Prénom</th>
+                        <td>{{ entity.prenomContact }}</td>
+                    </tr>
+                    <tr>
+                        <th>E-mail</th>
+                        <td>{{ entity.eMailContact }}</td>
+                    </tr>
+                    <tr>
+                        <th>Téléphone</th>
+                        <td>{{ entity.telContact }}</td>
+                    </tr>
+                    <tr>
+                        <th>Commentaire</th>
+                        <td>{{ entity.commentaireContact }}</td>
+                    </tr>
+                    <tr>
+                        <th>Date de Naissance</th>
+                        <td>{{ entity.dateDeNaissanceContact|date('d-m-Y H:i:s') }}</td>
+                    </tr>
+            	    <tr>
+            		    <th>Societe</th>
+            		    <td>{{ entity.societe }}</td>
+            	    </tr>
+            	    <tr>
+            		    <th>Catégorie</th>
+            		    <td>{{ entity.categorieContact }} </td>
+            	    </tr>
+                
+            </table>
+
+            <a href="{{ path('contact') }}">
+                <input type="button" class="btn btn-default" value="Retour" />
+            </a>
+            <a href="{{ path('contact_edit', { 'id': entity.id }) }}">
+                <input type="button" class="btn btn-default" value="Modifier" />
+            </a>
+
+            {{ form(delete_form) }}
+        </div>
+    </div>
+{% endblock %}

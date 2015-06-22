@@ -1,0 +1,27 @@
+gogole_categoriecontact:
+    resource: "@GogoleContactBundle/Controller/"
+    prefix:   /main/
+    type:     annotation
+
+gogole_societe:
+    resource: "@GogoleContactBundle/Controller/"
+    prefix:   /main/
+    type:     annotation
+
+gogole_contact:
+    resource: "@GogoleContactBundle/Controller/"
+    prefix:   /main/
+    type:     annotation
+
+gogole_todo:
+    resource: "@GogoleTodoBundle/Resources/config/routing.yml"
+    prefix:   /main/
+
+gogole_tchat:
+    resource: "@GogoleTchatBundle/Resources/config/routing.yml"
+    prefix:   /main/
+
+gogole_main:
+    resource: "@GogoleMainBundle/Resources/config/routing.yml"
+    prefix:   /main/
+

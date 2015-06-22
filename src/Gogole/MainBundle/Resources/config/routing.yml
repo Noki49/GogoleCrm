@@ -1,0 +1,7 @@
+gogole_main_homepage:
+    path:     /
+    defaults: { _controller: GogoleTchatBundle:Tchat:main }
+
+gogole_main_homepage:
+    path:   /
+    defaults: { _controller: GogoleTodoBundle:Todo:main }

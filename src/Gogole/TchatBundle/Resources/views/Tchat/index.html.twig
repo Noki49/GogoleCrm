@@ -1,0 +1,36 @@
+{% extends "GogoleMainBundle:Main:layout.html.twig" %}
+
+{% block tchat %}
+	<div class="row">
+		<div class="col-md-offset-4">
+			{{ form_start(form) }}
+			{{ form_errors(form) }}
+
+			<div class="form-group">
+				{{ form_label(form.utilisateur) }}
+				{{ form_widget(form.utilisateur) }}
+			</div>
+			<div class="form-group">
+				{{ form_label(form.message) }}
+				{{ form_widget(form.message) }}
+			</div>
+						
+			{{ form_end(form) }}
+		</div>
+	</div>
+	<br />
+	{% for allMessage  in  allMessage | reverse %}
+		<table class="table table-hover">
+			<tr class="active">
+				<td>{{allMessage.createdAt | date('d/m/Y  H:i')}}</td>
+			</tr>
+			<tr>
+				<td><h3>{{allMessage.utilisateur}}</h3></td>
+			</tr>
+			<tr>
+				<td><h3>{{allMessage.message}}</h3></td>
+			</tr>
+		</table>
+	{% endfor %}
+	
+{% endblock %}

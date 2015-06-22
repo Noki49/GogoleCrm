@@ -1,0 +1,15 @@
+gogole_todo_homepage:  # chemin vers l affiche de toutes les taches 
+    path:     /
+    defaults: { _controller: GogoleTodoBundle:Todo:listeTache }
+
+gogole_todo_creationTache: # chemin vers la page de creation de tache 
+    path:     /todolist/creationTache/
+    defaults: { _controller: GogoleTodoBundle:Todo:creeTache }
+
+gogole_todo_modifierTache: # chemin vers la page de creation de tache 
+    path:     /todolist/modifierTache/{id}
+    defaults: { _controller: GogoleTodoBundle:Todo:modifierTache }
+
+gogole_todo_supprimerTache: # chemin vers la page de creation de tache 
+    path:     /todolist/supprimerTache/{id}
+    defaults: { _controller: GogoleTodoBundle:Todo:supprimeTache }
