@@ -1,5 +1,5 @@
 security:
-<<<<<<< HEAD
+
     encoders:
         FOS\UserBundle\Model\UserInterface: bcrypt
 
@@ -38,17 +38,3 @@ security:
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/, role: ROLE_ADMIN }
 
-=======
-
-    providers:
-        in_memory:
-            memory: ~
-
-    firewalls:
-        dev:
-            pattern: ^/(_(profiler|wdt|error)|css|images|js)/
-            security: false
-
-        main:
-            anonymous: ~
->>>>>>> upstream/master

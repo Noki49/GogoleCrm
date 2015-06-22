@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+
+		<head>
+			<meta charset="utf-8"> 
+	   		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    		<meta name="viewport" content="width=device-width, initial-scale=1">
+	    		<title>Gogole CRM</title>
+	   		<meta name="description" content="Gogole CRM">
+			{% include'GogoleMainBundle:Main:stylesheet.html.twig' %}	
+		</head>
+
+		<body>
+			<div class="container">
+		      <div id="login">
+		        <form role="form" class="row col-md-offset-4 col-md-4 col-md-offset-4 col-sm-offset-4 col-sm-4">
+		          <img src="{{('bundles/gogolemain/images/logo.png')}}" alt="logo" />
+		          <div class="form-group">
+		            <input type="text" class="form-control" placeholder="Login" name="login">
+		            <input type="password" class="form-control" placeholder="Mot de passe" name="password">
+		            <button type="submit" class="btn btn-default pull-right">Se connecter</button>
+		          </div>
+		        </form>
+		      </div>
+		    </div>
+
+			<footer>
+		      <script>
+		        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		        ga('create', 'UA-62590323-1', 'auto');
+		        ga('send', 'pageview');
+		      </script>
+		    </footer>
+		</body>
+		
+	</html>
+

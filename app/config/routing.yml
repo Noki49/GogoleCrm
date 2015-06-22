@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-gogole_user:
-    resource: "@GogoleUserBundle/Resources/config/routing.yml"
-    prefix:   /
 
-gogole_todo:
-    resource: "@GogoleTodoBundle/Resources/config/routing.yml"
-    prefix:   /
-
-gogole_main:
-    resource: "@GogoleMainBundle/Resources/config/routing.yml"
-    prefix:   /
-    
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
-=======
 gogole_categoriecontact:
     resource: "@GogoleContactBundle/Controller/"
     prefix:   /main/
@@ -41,4 +26,6 @@ gogole_main:
     resource: "@GogoleMainBundle/Resources/config/routing.yml"
     prefix:   /main/
 
->>>>>>> upstream/master
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
