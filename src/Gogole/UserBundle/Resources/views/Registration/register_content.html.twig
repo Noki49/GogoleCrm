@@ -1,0 +1,12 @@
+{% extends "GogoleMainBundle:Mainview:index.html.twig"%}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+         <a href="{{path('gogole_todo_homepage')}}">retour</a>
+    </div>
+
+</form>

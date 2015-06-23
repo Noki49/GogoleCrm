@@ -53,14 +53,24 @@ class Tache
      * @var boolean
      *
      * @ORM\Column(name="etat", type="boolean",nullable=true)
+     *
      */
     private $etat;
 
+    /**
+    * @var User
+    *
+    *@ORM\ManyToOne(targetEntity="Gogole\UserBundle\Entity\User")
+    */
+    private $utilisateur;
+
     // fonction crée donne la date du jour a la creation de la tache 
-    public function __construct(){
+    public function __construct($utilisateur){
 
         $this->dateCreation = new \dateTime;
         $this->etat = false;
+        $this->utilisateur = $utilisateur;
+
         
     }
 
@@ -193,5 +203,16 @@ class Tache
     {
         return $this->etat;
     }
+
+    /**
+     * Get utilisateur
+     *
+     * @return Gogole\UserBundle\Entity\User
+     */
+    public function getUtilisateur()
+    {
+        return $this->utilisateur;
+    }
+
 
 }

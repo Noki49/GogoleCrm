@@ -10,43 +10,68 @@ use Gogole\TodoBundle\Form\FormCreeTacheType;
 /* les entité */
 use Gogole\TodoBundle\Entity\Tache;
 
+use Gogole\UserBundle\Entity\User;
+
+
 class TodoController extends Controller
 {
 
+
 /***************************************************** affiche toutes les taches ***********************************************************************/
+
 	
 	// fonction qui permet d afficher toutes les taches
 
     public function listeTacheAction() // fonction qui envoi vers la page ou il y a toute les listes
     {
-        $tacheEncourt = array(); 
+
+        $tacheActuelle = array(); 
+
         $tacheTerminer = array(); 
         $cpt = 0;
 
     	$em = $this->getDoctrine()->getManager(); // on donne a la variable $em les droit pour gerer la base de donnees
     	$uneTache = $em->getRepository("GogoleTodoBundle:Tache"); // $em pointe sur la table tache
 
-    	$mesTaches = $uneTache->findAll(); // findAll permet de recuperer toutes les colonne de la table
-        
-            foreach ($mesTaches as $key => $value) 
-            {
-               if ($value->getEtat()==false)
-               {
-                    $tacheEncourt[$cpt] = $value;
-               }
-               else if ($value->getEtat()== true)
-               {
-                    $tacheTerminer[$cpt] = $value;
-               }
-               $cpt++;
-            }
-        return $this->render('GogoleTodoBundle:Todo:ListeTache.html.twig', array(
 
-            'mes_taches'=> $mesTaches,
-            'tache_encourt' => $tacheEncourt,
-            'tache_terminer' => $tacheTerminer
-        ));
-   
+
+ // cette ligne permet de recuperer le numero de l utilisateur connecter
+            $user = $this->container->get('security.context')->getToken()->getUser();
+
+        if ($user != "anon."){
+
+            dump($user->getId());
+
+        	$mesTaches = $uneTache->findBy(
+            
+                array('utilisateur'=> $user->getId())
+
+
+            ); // findAll permet de recuperer toutes les colonne de la table
+            
+                foreach ($mesTaches as $key => $value) 
+                {
+                   if ($value->getEtat()==false)
+                   {
+                        $tacheActuelle[$cpt] = $value;
+                   }
+                   else if ($value->getEtat()== true)
+                   {
+                        $tacheTerminer[$cpt] = $value;
+                   }
+                   $cpt++;
+                }
+             
+                
+            return $this->render('GogoleTodoBundle:Todo:ListeTache.html.twig', array(
+
+                'mes_taches'=> $mesTaches,
+                'tache_actuelle' => $tacheActuelle,
+                'tache_terminer' => $tacheTerminer
+            ));
+        } 
+        else {return $this->redirect($this->generateUrl('fos_user_registration_register'));}
+
     }
 
 
@@ -56,9 +81,13 @@ class TodoController extends Controller
 
     public function creeTacheAction(Request $request)
     {
+
+        $user = $this->container->get('security.context')->getToken()->getUser();// cette ligne permet de recuperer le numero de l utilisateur connecter
+
+
     	$em = $this->getDoctrine()->getManager(); // on donne a la variable $em les droit pour gerer la base de donnees
-    	$tache =new Tache(); // creation d un objet tache vide qui va beintot recevoir le retour du formulaire
-    	
+    	$tache =new Tache($user); // creation d un objet tache vide qui va beintot recevoir le retour du formulaire
+
     	// creation du formulaire
 
     	$formulaire = $this->get("form.factory")->create(new formCreeTacheType(),$tache);
@@ -140,8 +169,7 @@ class TodoController extends Controller
 
     }
 
-
-
     
 
 }
+
