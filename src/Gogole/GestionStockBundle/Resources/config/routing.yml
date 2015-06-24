@@ -1,0 +1,3 @@
+gogole_gestion_stock_homepage:
+    path:     /gestion/
+    defaults: { _controller: GogoleGestionStockBundle:Default:index }

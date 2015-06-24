@@ -5,13 +5,14 @@
 <script type="text/javascript" src="{{ asset('bundles/gogolemain/js/bootstrap.min.js')}}"></script>
 
 	{# <!-- Calendar --> #}
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar/lib/jquery-ui.custom.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar/lib/moment.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar/lib/jquery.min.js')}}"></script>
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar/fullcalendar.js')}}"></script>
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar/lang-all.js')}}"></script>
-<script type="text/javascript" src="{{ asset('bundles/gogolemain/js/calendar.js')}}"></script>
+<script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/jquery/jquery-1.8.2.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/fullcalendar/jquery.fullcalendar.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/adesignscalendar/js/calendar-settings.js') }}"></script>
 
 	{# <!-- Afficher/cacher calendrier --> #}
 <script type="text/javascript" src="{{ asset('bundles/gogolemain/js/toggle.js')}}"></script>
+
+	{# <!-- FOSJsRouting --> #}
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
 

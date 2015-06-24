@@ -36,7 +36,7 @@ class TodoController extends Controller
 
 
  // cette ligne permet de recuperer le numero de l utilisateur connecter
-            $user = $this->container->get('security.context')->getToken()->getUser();
+        $user = $this->container->get('security.context')->getToken()->getUser();
 
         if ($user != "anon."){
 
@@ -47,7 +47,8 @@ class TodoController extends Controller
                 array('utilisateur'=> $user->getId())
 
 
-            ); // findAll permet de recuperer toutes les colonne de la table
+            );
+                 // findAll permet de recuperer toutes les colonne de la table
             
                 foreach ($mesTaches as $key => $value) 
                 {

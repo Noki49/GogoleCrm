@@ -24,13 +24,6 @@ class Message
     /**
      * @var string
      *
-     * @ORM\Column(name="utilisateur", type="string", length=255)
-     */
-    private $utilisateur;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="message", type="string", length=255)
      */
     private $message;
@@ -41,6 +34,13 @@ class Message
      * @ORM\Column(name="createdAt", type="datetime")
      */
     private $createdAt;
+
+    /**
+    * @var User
+    *
+    *@ORM\ManyToOne(targetEntity="Gogole\UserBundle\Entity\User")
+    */
+    private $utilisateur;
 
 
     /**
@@ -121,8 +121,17 @@ class Message
     {
         return $this->createdAt;
     }
-    public function __construct()
+
+    public function __construct($utilisateur)
     {
+        $this->utilisateur = $utilisateur;
 	    $this->createdAt = new \dateTime;
     }
+
+    public function __toString()
+    {
+        return $this->$user;
+    }
+
 }
+

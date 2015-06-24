@@ -20,12 +20,12 @@ class AppKernel extends Kernel
             new Gogole\TodoBundle\GogoleTodoBundle(),
             new Gogole\TchatBundle\GogoleTchatBundle(),
             new Gogole\ContactBundle\GogoleContactBundle(),
+            new Gogole\GestionStockBundle\GogoleGestionStockBundle(),
+
             new Gogole\UserBundle\GogoleUserBundle(),
-            
             new FOS\UserBundle\FOSUserBundle(),
-            
-	        
-	        
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new ADesigns\CalendarBundle\ADesignsCalendarBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

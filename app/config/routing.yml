@@ -1,4 +1,8 @@
-
+gogole_stockManager:
+    resource: "@GogoleGestionStockBundle/Controller/"
+    prefix:   /main/
+    type:     annotation
+    
 gogole_categoriecontact:
     resource: "@GogoleContactBundle/Controller/"
     prefix:   /main/
@@ -26,6 +30,16 @@ gogole_main:
     resource: "@GogoleMainBundle/Resources/config/routing.yml"
     prefix:   /main/
 
+
+
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
 
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+fos_js_routing:
+     routes_to_expose: [ 'fullcalendar_loader' ]
+
+adesigns_calendar:
+  resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"  

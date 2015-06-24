@@ -1,8 +1,7 @@
 gogole_main_homepage:
-    path:     /
-    defaults: { _controller: GogoleTchatBundle:Tchat:tchat }
-
-gogole_main_homepage:
     path:   /
     defaults: { _controller: GogoleMainBundle:Main:index }
 
+gogole_main_planningpage:
+    path:   /planning
+    defaults: { _controller: GogoleMainBundle:Main:planning  }

@@ -3,8 +3,11 @@
 namespace Gogole\TchatBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+
 use Gogole\TchatBundle\Entity\Message;
 use Symfony\Component\HttpFoundation\Request;
+
+use Gogole\UserBundle\Entity\User;
 
 class TchatController extends Controller
 {
@@ -17,18 +20,25 @@ class TchatController extends Controller
 		// donne le nombre de message de la BDD
 		$max = count($allMessage);
 
-		$message = new Message();
+		$user = $this->container->get('security.context')->getToken()->getUser();   
+
+		$message = new Message($user);
+
+		if ($user == "anon."){
+
+			return $this->render('GogoleMainBundle:Main:connexion.html.twig');
+
+        }
 
 		// création du formulaire
 		$formBuilder = $this->get('form.factory')->createBuilder('form', $message);
 		$formBuilder
-			->add('utilisateur')
 			->add('message')
 			->add('Envoyer', 'submit');
 		$form = $formBuilder->getForm();
 		$form->handleRequest($request);
 
-		// Si formulaire complet
+		// Si formulaire est complet
 		if($form->isValid())
 		{
 			// s'il y a plus de dix message stocké dans la BDD

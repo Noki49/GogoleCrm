@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>stockManager</h1>
+
+    <table class="record_properties" border=2>
+        <tbody>
+            <tr>
+                <th>Référence</th>
+                <td>{{ entity.ref }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ entity.nom }}</td>
+            </tr>
+            <tr>
+                <th>Prix achat</th>
+                <td>{{ entity.pa }}</td>
+            </tr>
+            <tr>
+                <th>Prix vente</th>
+                <td>{{ entity.pv }}</td>
+            </tr>
+            <tr>
+                <th>Marge</th>
+                <td>{{ entity.marge }}</td>
+            </tr>
+            <tr>
+                <th>Qtt stock</th>
+                <td>{{ entity.qttStock }}</td>
+            </tr>
+            <tr>
+                <th>Qtt seuil</th>
+                <td>{{ entity.qttSeuil }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+        <a href="{{ path('stockmanager') }}">
+            <input type="button" value="retour" />
+        </a>
+        <a href="{{ path('stockmanager_edit', { 'id': entity.id }) }}">
+            <input type="button" value="modifier" />
+        </a>
+{{ form(delete_form) }}
+{% endblock %}
