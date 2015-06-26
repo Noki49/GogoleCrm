@@ -19,7 +19,7 @@ class stockManagerType extends AbstractType
             ->add('nom')
             ->add('pa')
             ->add('pv')
-//            ->add('marge')
+//          ->add('marge')
             ->add('qttStock')
             ->add('qttSeuil')
         ;

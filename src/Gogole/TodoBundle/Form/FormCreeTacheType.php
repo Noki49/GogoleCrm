@@ -17,7 +17,6 @@ class FormCreeTacheType extends AbstractType
         $builder
             ->add('tache')
             ->add('dateEcheance')
-            ->add('valider','submit')
         ;
     }
     /**

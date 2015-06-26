@@ -1,25 +1,25 @@
 {% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body %}
-    <h2 class="text-center">Fiche d'une société</h2>
+    <h2 class="text-center"><span>F</span>iche d'une société</h2>
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
             <table class="table">
                     {#{<tr><th>Id</th><td>{{ entity.id }}</td></tr>}#}
                     <tr>
-                        <th>Nom</th>
+                        <th><span>N</span>om</th>
                         <td>{{ entity.nomSociete }}</td>
                     </tr>
                     <tr>
-                        <th>Siret</th>
+                        <th><span>S</span>iret</th>
                         <td>{{ entity.siretSociete }}</td>
                     </tr>
                     <tr>
-                        <th>E-mail</th>
+                        <th><span>E</span>-mail</th>
                         <td>{{ entity.eMailSociete }}</td>
                     </tr>
                     <tr>
-                        <th>Téléphone</th>
+                        <th><span>T</span>éléphone</th>
                         <td>{{ entity.telSociete }}</td>
                     </tr>
                 

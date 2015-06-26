@@ -1,7 +1,7 @@
 {% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body %}
-    <h2 class="text-center">Fiche du contact</h2>
+    <h2 class="text-center"><span>F</span>iche du contact</h2>
 
     <div class="row">
         <div class="col-md-offset-2 col-md-8 col-md-offset-2">
@@ -9,35 +9,35 @@
             
         	   {#{<tr><th>Id</th><td>{{ entity.id }}</td></tr>}#}
                     <tr>
-                        <th>Nom</th>
+                        <th><span>N</span>om</th>
                         <td>{{ entity.nomContact }}</td>
                     </tr>
                     <tr>
-                        <th>Prénom</th>
+                        <th><span>P</span>rénom</th>
                         <td>{{ entity.prenomContact }}</td>
                     </tr>
                     <tr>
-                        <th>E-mail</th>
+                        <th><span>E</span>-mail</th>
                         <td>{{ entity.eMailContact }}</td>
                     </tr>
                     <tr>
-                        <th>Téléphone</th>
+                        <th><span>T</span>éléphone</th>
                         <td>{{ entity.telContact }}</td>
                     </tr>
                     <tr>
-                        <th>Commentaire</th>
+                        <th><span>C</span>ommentaire</th>
                         <td>{{ entity.commentaireContact }}</td>
                     </tr>
                     <tr>
-                        <th>Date de Naissance</th>
+                        <th><span>D</span>ate de Naissance</th>
                         <td>{{ entity.dateDeNaissanceContact|date('d-m-Y H:i:s') }}</td>
                     </tr>
             	    <tr>
-            		    <th>Societe</th>
+            		    <th><span>S</span>ociete</th>
             		    <td>{{ entity.societe }}</td>
             	    </tr>
             	    <tr>
-            		    <th>Catégorie</th>
+            		    <th><span>C</span>atégorie</th>
             		    <td>{{ entity.categorieContact }} </td>
             	    </tr>
                 

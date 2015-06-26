@@ -84,7 +84,7 @@ class stockManagerController extends Controller
             'method' => 'POST',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Créer'));
+        $form->add('Créer', 'submit', array('attr' => array('class' => 'btn btn-default')));
 
         return $form;
     }
@@ -173,7 +173,7 @@ class stockManagerController extends Controller
             'method' => 'PUT',
         ));
 
-        $form->add('submit', 'submit', array('label' => 'Modifier'));
+        $form->add('Modifier', 'submit', array('attr' => array('class' => 'btn btn-default')));
 
         return $form;
     }
@@ -199,7 +199,7 @@ class stockManagerController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
-		$entity->setMarge($entity->getPv() - $entity->getPa());
+		    $entity->setMarge($entity->getPv() - $entity->getPa());
             $em->flush();
 
             return $this->redirect($this->generateUrl('stockmanager', array('id' => $id)));
@@ -249,7 +249,7 @@ class stockManagerController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('stockmanager_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Supprimer'))
+            ->add('Supprimer', 'submit', array('attr' => array('class' => 'btn btn-default')))
             ->getForm()
         ;
     }

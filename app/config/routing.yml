@@ -1,8 +1,12 @@
+gogole_calendar:
+    resource: "@GogoleCalendarBundle/Resources/config/routing.yml"
+    prefix:   /
+
 gogole_stockManager:
     resource: "@GogoleGestionStockBundle/Controller/"
     prefix:   /main/
     type:     annotation
-    
+
 gogole_categoriecontact:
     resource: "@GogoleContactBundle/Controller/"
     prefix:   /main/
@@ -32,14 +36,28 @@ gogole_main:
 
 
 
-fos_user:
-    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+fos_user_security:
+    resource: "@GogoleUserBundle/Resources/config/routing/security.xml"
+
+fos_user_profile:
+    resource: "@GogoleUserBundle/Resources/config/routing/profile.xml"
+    prefix: /profile
+
+fos_user_register:
+    resource: "@GogoleUserBundle/Resources/config/routing/registration.xml"
+    prefix: /register
+
+fos_user_resetting:
+    resource: "@GogoleUserBundle/Resources/config/routing/resetting.xml"
+    prefix: /resetting
+
+fos_user_change_password:
+    resource: "@GogoleUserBundle/Resources/config/routing/change_password.xml"
+    prefix: /profile
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
 
-fos_js_routing:
-     routes_to_expose: [ 'fullcalendar_loader' ]
-
-adesigns_calendar:
-  resource: "@ADesignsCalendarBundle/Resources/config/routing.xml"  
+BladeTesterCalendarBundle:
+    resource: "@BladeTesterCalendarBundle/Resources/config/routing.yml"
+    prefix:   /main/

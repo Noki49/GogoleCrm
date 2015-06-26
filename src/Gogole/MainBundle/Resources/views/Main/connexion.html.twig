@@ -11,17 +11,15 @@
 		</head>
 
 		<body>
+			
 			<div class="container">
+
 		      <div id="login">
-		        <form role="form" class="row col-md-offset-4 col-md-4 col-md-offset-4 col-sm-offset-4 col-sm-4">
-		          <img src="{{('bundles/gogolemain/images/logo.png')}}" alt="logo" />
-		          <div class="form-group">
-		            <input type="text" class="form-control" placeholder="Login" name="login">
-		            <input type="password" class="form-control" placeholder="Mot de passe" name="password">
-		            <button type="submit" class="btn btn-default pull-right">Se connecter</button>
-		          </div>
-		        </form>
+		      	<img class="col-md-offset-4" src="{{asset('bundles/gogolemain/images/logo.png') }}" alt="logo"></img>
+		        {% block fos_user_content %}
+				{% endblock %}
 		      </div>
+		      
 		    </div>
 
 			<footer>

@@ -32,15 +32,15 @@ class categorieContactController extends Controller
         $entities = $em->getRepository('GogoleContactBundle:categorieContact')->findAll();
 
 	// on ajoute le bouton delete pour les fins de ligne dans le tableau direct
-	$boutonDelete=array();
-	foreach($entities as $catContact)
-	{
-		$boutonDelete[$catContact->getId()] = $this->createDeleteForm($catContact->getId())->createView();
-	}
+    	$boutonDelete=array();
+    	foreach($entities as $catContact)
+    	{
+    		$boutonDelete[$catContact->getId()] = $this->createDeleteForm($catContact->getId())->createView();
+    	}
 
         return array(
-            	'entities' => $entities,
-		'boutonDelete' => $boutonDelete,
+            'entities' => $entities,
+    		'boutonDelete' => $boutonDelete,
         );
     }
     /**
@@ -84,7 +84,6 @@ class categorieContactController extends Controller
             'method' => 'POST',
         ));
 
-//        $form->add('submit', 'submit', array('label' => 'Create'));
 
         return $form;
     }
@@ -173,7 +172,6 @@ class categorieContactController extends Controller
             'method' => 'PUT',
         ));
 
-//        $form->add('submit', 'submit', array('label' => 'Update'));
 
         return $form;
     }
@@ -248,7 +246,7 @@ class categorieContactController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('categoriecontact_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Supprimer'))
+            ->add('Supprimer', 'submit', array('attr' => array('class' => 'btn btn-default')))
             ->getForm()
         ;
     }

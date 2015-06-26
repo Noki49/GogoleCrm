@@ -1,22 +1,19 @@
-{% extends '::base.html.twig' %}
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body -%}
-    <h1>stockManager list</h1>
+    <h2 class="text-center"><span>L</span>iste des stocks</h2>
 
-    <table class="records_list" border=2>
-        <thead>
-            <tr>
-                <th>Référence</th>
-                <th>Nom</th>
-                <th>Prix Achat</th>
-                <th>Prix Vente</th>
-                <th>Marge</th>
-                <th>Qtt stock</th>
-                <th>Qtt seuil</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
+    <table class="table">
+        <tr>
+            <th><span>R</span>éférence</th>
+            <th><span>N</span>om</th>
+            <th><span>P</span>rix d'achat</th>
+            <th><span>P</span>rix de vente</th>
+            <th><span>M</span>arge</th>
+            <th><span>Q</span>uantité en stock</th>
+            <th><span>S</span>euil</th>
+            <th><span>A</span>ctions</th>
+        </tr>
         {% for entity in entities %}
             <tr>
                 {#{<td><a href="{{ path('stockmanager_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>}#}
@@ -24,25 +21,31 @@
                 <td>{{ entity.nom }}</td>
                 <td>{{ entity.pa }}</td>
                 <td>{{ entity.pv }}</td>
-		<td>{{ entity.marge }} </td>
+		        <td>{{ entity.marge }} </td>
                 <td>{{ entity.qttStock }}</td>
                 <td>{{ entity.qttSeuil }}</td>
                 <td>
-                <table><tr>
-                    <td>
-                        <a href="{{ path('stockmanager_show', { 'id': entity.id }) }}"><input type="button" value="voir" /></a>
-                    </td>
-                    <td>
-                        <a href="{{ path('stockmanager_edit', { 'id': entity.id }) }}"><input type="button" value="modifier" /></a>
-                    </td>
-		    <td>{{ form(boutonDelete[entity.id]) }}</td>
-                </tr></table>
+                    <table>
+                        <tr>
+                            <td>
+                                <a href="{{ path('stockmanager_show', { 'id': entity.id }) }}">
+                                    <input type="button" class="btn btn-default" value="Voir" />
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ path('stockmanager_edit', { 'id': entity.id }) }}">
+                                    <input type="button" class="btn btn-default" value="Modifier" />
+                                </a>
+                            </td>
+    		                <td>{{ form(boutonDelete[entity.id]) }} </td>
+                        </tr>
+                    </table>
                 </td>
             </tr>
         {% endfor %}
-        </tbody>
+        
     </table>
-            <a href="{{ path('stockmanager_new') }}">
-                <input type="button" value="créer produit" />
-            </a>
-    {% endblock %}
+    <a href="{{ path('stockmanager_new') }}">
+        <input type="button" class="btn btn-default" value="Créer un produit" />
+    </a>
+{% endblock %}

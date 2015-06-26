@@ -1,18 +1,45 @@
 {% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body %}
-<h2 class="text-center">Modifier un contact</h2>
+<h2 class="text-center"><span>M</span>odifier un contact</h2>
 	<div class="row">
 		<div class="col-md-offset-5">
 			{{ form_start(edit_form) }}
-				<p>{{ form_row(edit_form.nomContact) }}</p>
-				<p>{{ form_row(edit_form.prenomContact) }}</p>
-				<p>{{ form_row(edit_form.eMailContact) }}</p>
-				<p>{{ form_row(edit_form.telContact) }}</p>
-				<p>{{ form_row(edit_form.commentaireContact) }}</p>
-				<p>{{ form_row(edit_form.dateDeNaissanceContact) }}</p>
-				<p>{{ form_row(edit_form.societe) }}</p>
-				<p>{{ form_row(edit_form.categorieContact) }}</p>
+			{{ form_errors(edit_form) }}
+				<div class="form-group">
+					<p><b><span>N</span>om  </b></p>
+					{{ form_widget(edit_form.nomContact) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>P</span>rénom </b></p>
+					{{ form_widget(edit_form.prenomContact) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>E</span>-mail </b></p>
+					{{ form_widget(edit_form.eMailContact) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>T</span>éléphone </b></p>
+					{{ form_widget(edit_form.telContact) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>C</span>ommentaire </b></p>
+					{{ form_widget(edit_form.commentaireContact) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>D</span>ate de naissance </b></p>
+					{{ form_widget(edit_form.dateDeNaissanceContact) }}
+				</div>	
+				<div class="form-group">
+					<p><b><span>S</span>ociété </b></p>
+					{{ form_widget(edit_form.societe) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>C</span>atégorie de contact </b></p>
+					{{ form_widget(edit_form.categorieContact) }}
+				</div>	
+				<input type="submit" class="btn btn-default" value="Créer" />
+
 				<input type="submit" class="btn btn-default" value="Modifier" />
 			{{ form_end(edit_form) }}
 			<br />

@@ -1,18 +1,42 @@
-{% extends '::base.html.twig' %}
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body -%}
-    <h1>stockManager creation</h1>
+    <h2 class="text-center"><span>C</span>réer un produit à stocker</h2>
 
-	{{ form_start(form) }}
-	{{ form_row(form.ref) }}
-	{{ form_row(form.nom) }}
-	{{ form_row(form.pa) }}
-	{{ form_row(form.pv) }}
-	{{ form_row(form.qttStock) }}
-	{{ form_row(form.qttSeuil) }}
-	{{ form_end(form) }}
+    <div class="row">
+    	<div class="col-md-offset-5 col-md-4">
+			{{ form_start(form) }}
+			{{ form_errors(form) }}
+				<div class="form-group">
+					<p><b><span>R</span>éférence </b></p>
+					{{ form_widget(form.ref) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>N</span>om </b></p>
+					{{ form_widget(form.nom) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>P</span>rix d'achat </b></p>
+					{{ form_widget(form.pa) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>P</span>rix de vente </b></p>
+					{{ form_widget(form.pv) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>Q</span>uantité en stock </b></p>
+					{{ form_widget(form.qttStock) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>S</span>euil </b></p>
+					{{ form_widget(form.qttSeuil) }}
+				</div>
 
-        <a href="{{ path('stockmanager') }}">
-            <input type="button" value="retour" />
-        </a>
+			{{ form_end(form) }}
+
+		    <a href="{{ path('stockmanager') }}">
+		        <input type="button" class="btn btn-default" value="Retour" />
+		    </a>
+		</div>
+	</div>
 {% endblock %}

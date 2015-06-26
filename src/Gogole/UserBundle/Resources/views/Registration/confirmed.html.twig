@@ -1,4 +1,4 @@
-{% extends "GogoleMainBundle:Mainview:index.html.twig"%}
+{% extends "GogoleMainBundle:Main:layout.html.twig" %}
 
 {% trans_default_domain 'FOSUserBundle' %}
 
@@ -8,5 +8,4 @@
         {% set targetUrl = app.session.get('_security.' ~ app.security.token.providerKey ~ '.target_path') %}
         {% if targetUrl is not empty %}<p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>{% endif %}
     {% endif %}
-    <a href="{{path('gogole_todo_homepage')}}">retour</a>
 {% endblock fos_user_content %}

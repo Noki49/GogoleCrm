@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61fa775b0e5633aa28c7f0c8f5bc22e2",
+    "hash": "0924b61e8698b5f1c0eeeab725cd9e98",
     "packages": [
         {
             "name": "adesigns/calendar-bundle",
@@ -51,6 +51,54 @@
                 "jquery calendar"
             ],
             "time": "2014-04-24 15:48:09"
+        },
+        {
+            "name": "carlescliment/calendar-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/carlescliment/calendar-bundle.git",
+                "reference": "ae288c3be2e1ffcf2fc42635220d106f730713e0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/carlescliment/calendar-bundle/zipball/ae288c3be2e1ffcf2fc42635220d106f730713e0",
+                "reference": "ae288c3be2e1ffcf2fc42635220d106f730713e0",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "sensio/framework-extra-bundle": ">=2.5"
+            },
+            "require-dev": {
+                "doctrine/doctrine-bundle": "v1.5.0",
+                "doctrine/orm": "*",
+                "phpunit/phpunit": "*",
+                "symfony/symfony": "~2.5"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-0": {
+                    "BladeTester\\CalendarBundle": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Carles Climent Granell",
+                    "email": "carlescliment@gmail.com"
+                }
+            ],
+            "description": "A bundle for handling events in calendar",
+            "homepage": "https://github.com/carlescliment/calendar-bundle",
+            "keywords": [
+                "calendar",
+                "events"
+            ],
+            "time": "2015-06-09 03:48:44"
         },
         {
             "name": "doctrine/annotations",
@@ -2772,7 +2820,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "friendsofsymfony/user-bundle": 20
+        "friendsofsymfony/user-bundle": 20,
+        "carlescliment/calendar-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -40,7 +40,6 @@ class TodoController extends Controller
 
         if ($user != "anon."){
 
-            dump($user->getId());
 
         	$mesTaches = $uneTache->findBy(
             

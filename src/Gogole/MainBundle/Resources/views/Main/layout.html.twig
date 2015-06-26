@@ -15,14 +15,12 @@
 				</div>
 				<div class="col-sm-9 col-md-12">
 					<div class="page-header">
-						<h3 class="text-center"><span class="glyphicon glyphicon-th-list"></span> Gogole CRM</h3>
+						<h3 class="text-center"><b class="glyphicon glyphicon-th-list"></b> <span>G</span>ogole CRM</h3>
 					</div>
 					<div class="row">
 						{# <!-- Box principal --> #}
 						<div class="col-md-offset-2 col-md-8 thumbnail">
 							<div id="box">
-								<a href="{{ path('gogole_main_homepage')}}" class="thumbnail glyphicon glyphicon-dashboard" id="dash"></a>
-
 								<a href="{{ path('gogole_tchat_homepage')}}" class="thumbnail glyphicon glyphicon-envelope" id="tchat"></a>
 								{% block tchat %}
 								{% endblock %}
@@ -32,15 +30,6 @@
 							</div>
 						</div>
 					</div>
-					<div class="row">
-						{# <!-- Calendrier --> #}
-						<!--<a href="#" class="thumbnail glyphicon glyphicon-calendar" id="toggler">
-							{% include 'ADesignsCalendarBundle::calendar.html.twig' %}
-						</a> 
-						<div class="col-md-5" id="toggle">
-							<div id="calendar"></div>	-->
-						</div> {# <!-- end Toggle --> #}
-					</div> {# <!-- end Row --> #} 
 				</div> {# <!-- end col --> #}
 			</div> {# <!-- end Container-fluid --> #}
 			{% include'GogoleMainBundle:Main:script.html.twig' %}

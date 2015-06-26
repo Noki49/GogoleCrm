@@ -34,7 +34,7 @@ class TchatController extends Controller
 		$formBuilder = $this->get('form.factory')->createBuilder('form', $message);
 		$formBuilder
 			->add('message')
-			->add('Envoyer', 'submit');
+			->add('Envoyer', 'submit', array('attr' => array('class' => 'btn btn-default')));
 		$form = $formBuilder->getForm();
 		$form->handleRequest($request);
 

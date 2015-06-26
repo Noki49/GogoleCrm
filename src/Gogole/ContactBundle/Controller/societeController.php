@@ -31,16 +31,16 @@ class societeController extends Controller
 
         $entities = $em->getRepository('GogoleContactBundle:societe')->findAll();
 
-	$boutonDelete=array();
-	foreach($entities as $societe)
-	{
-		$boutonDelete[$societe->getId()] = $this->createDeleteForm($societe->getId())->createView();
-	}
+    	$boutonDelete=array();
+    	foreach($entities as $societe)
+    	{
+    		$boutonDelete[$societe->getId()] = $this->createDeleteForm($societe->getId())->createView();
+    	}
 
 
         return array(
-            	'entities' => $entities,
-		'boutonDelete' => $boutonDelete,
+        	'entities' => $entities,
+		    'boutonDelete' => $boutonDelete,
         );
     }
     /**
@@ -173,8 +173,6 @@ class societeController extends Controller
             'method' => 'PUT',
         ));
 
-//        $form->add('submit', 'submit', array('label' => 'Update'));
-
         return $form;
     }
     /**
@@ -248,7 +246,7 @@ class societeController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('societe_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Supprimer'))
+            ->add('Supprimer', 'submit', array('attr' => array('class' => 'btn btn-default')))
             ->getForm()
         ;
     }

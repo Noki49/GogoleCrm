@@ -1,14 +1,27 @@
 {% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body -%}
-    <h2 class="text-center">Modifier une société</h2>
+    <h2 class="text-center"><span>M</span>odifier une société</h2>
     <div class="row">
     	<div class="col-md-offset-5">
-	    	{{ form_start(edit_form) }}
-				<p>{{ form_row(edit_form.nomSociete) }}</p>
-				<p>{{ form_row(edit_form.siretSociete) }}</p>
-				<P>{{ form_row(edit_form.eMailSociete) }}</p>
-				<p>{{ form_row(edit_form.telSociete) }}</p>
+			{{ form_start(edit_form) }}
+			{{ form_errors(edit_form) }}
+				<div class="form-group">
+					<p><b><span>N</span>om de la société </b></p>
+					{{ form_widget(edit_form.nomSociete) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>S</span>iret de la société </b></p>
+					{{ form_widget(edit_form.siretSociete) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>E</span>-mail de la société </b></p>
+					{{ form_widget(edit_form.eMailSociete) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>T</span>éléphone de la société </b></p>
+					{{ form_widget(edit_form.telSociete) }}
+				</div>
 			    <input type="submit" class="btn btn-default" value="Modifier" />
 			{{ form_end(edit_form) }}
 			<br />

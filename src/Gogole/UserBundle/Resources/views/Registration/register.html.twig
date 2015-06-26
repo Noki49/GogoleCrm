@@ -1,6 +1,5 @@
-{% extends "GogoleMainBundle:Mainview:index.html.twig"%}
+{% extends "GogoleMainBundle:Main:connexion.html.twig" %}
 
 {% block fos_user_content %}
-{% include "FOSUserBundle:Registration:register_content.html.twig" %}
-
+	{% include "FOSUserBundle:Registration:register_content.html.twig" %}
 {% endblock fos_user_content %}

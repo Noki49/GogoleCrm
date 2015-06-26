@@ -1,12 +1,11 @@
-{% extends "GogoleMainBundle:Mainview:index.html.twig"%}
-
 {% trans_default_domain 'FOSUserBundle' %}
+	<h2 class="text-center"><span>I</span>nscription</h2>
+	<form class="row col-md-offset-4 col-md-4 col-md-offset-4 col-sm-offset-4 col-sm-4"  action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
+		<div class="form-group">
+	    	{{ form_widget(form) }}
+	  	
+	        <input class="btn btn-default pull-right" type="submit" value="{{ 'registration.submit'|trans }}" />
+	        <a class="btn btn-default pull-right" href="{{path('fos_user_security_login')}}">Connexion</a>
+	    </div>
+	</form>
 
-<form action="{{ path('fos_user_registration_register') }}" {{ form_enctype(form) }} method="POST" class="fos_user_registration_register">
-    {{ form_widget(form) }}
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
-         <a href="{{path('gogole_todo_homepage')}}">retour</a>
-    </div>
-
-</form>

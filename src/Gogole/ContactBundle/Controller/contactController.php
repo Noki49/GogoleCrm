@@ -31,16 +31,16 @@ class contactController extends Controller
 
         $entities = $em->getRepository('GogoleContactBundle:contact')->findAll();
 
-	$boutonDelete=array();
-	foreach($entities as $contact)
-	{
-		$boutonDelete[$contact->getId()] = $this->createDeleteForm($contact->getId())->createView();
-	}
+    	$boutonDelete=array();
+    	foreach($entities as $contact)
+    	{
+    		$boutonDelete[$contact->getId()] = $this->createDeleteForm($contact->getId())->createView();
+    	}
 
 
         return array(
-            	'entities' => $entities,
-		        'boutonDelete' => $boutonDelete,
+            'entities' => $entities,
+		    'boutonDelete' => $boutonDelete,
         );
     }
     /**
@@ -173,8 +173,6 @@ class contactController extends Controller
             'method' => 'PUT',
         ));
 
-//        $form->add('submit', 'submit', array('label' => 'Update'));
-
         return $form;
     }
     /**
@@ -248,7 +246,7 @@ class contactController extends Controller
         return $this->createFormBuilder()
             ->setAction($this->generateUrl('contact_delete', array('id' => $id)))
             ->setMethod('DELETE')
-            ->add('submit', 'submit', array('label' => 'Supprimer'))
+            ->add('Supprimer', 'submit', array('attr' => array('class' => 'btn btn-default')))
             ->getForm()
         ;
     }

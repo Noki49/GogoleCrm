@@ -3,10 +3,9 @@
 /********** Sommaire *************/
 /********** 1.Général ************/
 /********** 2.Menu ***************/
-/********** 3.Chiffre ************/
-/********** 4.Calendrier *********/
-/**********	5.Dernières action ***/
-/**********	6.Tchat **************/
+/********** 3.Calendrier *********/
+/**********	4.Dernières action ***/
+/**********	5.Tchat **************/
 
 /*********************************/
 /*********************************/
@@ -19,18 +18,22 @@
   height: 60em;
 }
 
-/* 2.Login */
-#login {
-  margin-top: 40%;
+a, h2, h1, h3, th, td {
+  color: #434141;
 }
 
-/* 3.Chiffre du mois */
+span {
+  color: #c72425;
+}
+/* 2.Login */
+#login {
+  margin-top: 20%;
+}
 
-/* 4.Calendrier */
+/* 3.Calendrier */
 #calendar {
   background-color: white;
-  width: 100%;
-  height: 100%;
+  border: solid 1px black;
 }
 
 #toggler {
@@ -69,50 +72,25 @@
   margin-bottom: 5%;
 }
 
-#dash {
-  position: fixed;
-  right: -2%;
-  top: 40%;
-  padding-top: 2em;
-  padding-left: 2em;
-  padding-bottom: 2em;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%; 
-  text-decoration: none;
-  z-index: 999;
-}
 
-#dash:hover {
-  position: fixed;
-  right: 0%;
-  top: 40%;
-  padding-top: 2em;
-  padding-left: 2em;
-  padding-bottom: 2em;
-  padding-right: 1em;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%; 
-  text-decoration: none;
-  z-index: 999;
-}
-
-/* 5.Dernières actions */
+/* 4.Dernières actions */
 #todo {
   position: fixed;
   right: -2%;
-  top: 50%;
+  top: 40%;
   padding-top: 2em;
   padding-left: 2em;
   padding-bottom: 2em;
   border-top-left-radius: 15%;
   border-bottom-left-radius: 15%; 
   text-decoration: none;
-  z-index: 999;
+  z-index: 999; 
 }
+
 #todo:hover {
   position: fixed;
   right: 0%;
-  top: 50%;
+  top: 40%;
   padding-top: 2em;
   padding-left: 2em;
   padding-bottom: 2em;
@@ -120,14 +98,14 @@
   border-top-left-radius: 15%;
   border-bottom-left-radius: 15%; 
   text-decoration: none;
-  z-index: 999;  
+  z-index: 999;   
 }
 
-/* 6.Tchat */
+/* 5.Tchat */
 #tchat {
   position: fixed;
   right: -2%;
-  top: 60%;
+  top: 50%;
   padding-top: 2em;
   padding-left: 2em;
   padding-bottom: 2em;
@@ -140,7 +118,7 @@
 #tchat:hover {
   position: fixed;
   right: 0%;
-  top: 60%;
+  top: 50%;
   padding-top: 2em;
   padding-left: 2em;
   padding-bottom: 2em;

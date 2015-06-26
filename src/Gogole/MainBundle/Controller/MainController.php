@@ -9,7 +9,7 @@ class MainController extends Controller
     public function indexAction()
     {	
 
-        return $this->render('GogoleMainBundle:Main:layout.html.twig', array());
+        return $this->render('GogoleMainBundle:Main:index.html.twig', array());
 
     }
 

@@ -1,46 +1,49 @@
-{% extends '::base.html.twig' %}
+{% extends 'GogoleMainBundle:Main:index.html.twig' %}
 
 {% block body -%}
-    <h1>stockManager</h1>
+    <h2 class="text-center"><span>A</span>ffichage d'un produit en stock</h2>
 
-    <table class="record_properties" border=2>
-        <tbody>
-            <tr>
-                <th>Référence</th>
-                <td>{{ entity.ref }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ entity.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prix achat</th>
-                <td>{{ entity.pa }}</td>
-            </tr>
-            <tr>
-                <th>Prix vente</th>
-                <td>{{ entity.pv }}</td>
-            </tr>
-            <tr>
-                <th>Marge</th>
-                <td>{{ entity.marge }}</td>
-            </tr>
-            <tr>
-                <th>Qtt stock</th>
-                <td>{{ entity.qttStock }}</td>
-            </tr>
-            <tr>
-                <th>Qtt seuil</th>
-                <td>{{ entity.qttSeuil }}</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <table class="table">
+                <tr>
+                    <th><span>R</span>éférence</th>
+                    <td>{{ entity.ref }}</td>
+                </tr>
+                <tr>
+                    <th><span>N</span>om</th>
+                    <td>{{ entity.nom }}</td>
+                </tr>
+                <tr>
+                    <th><span>P</span>rix d'achat</th>
+                    <td>{{ entity.pa }}</td>
+                </tr>
+                <tr>
+                    <th><span>P</span>rix de vente</th>
+                    <td>{{ entity.pv }}</td>
+                </tr>
+                <tr>
+                    <th><span>M</span>arge</th>
+                    <td>{{ entity.marge }}</td>
+                </tr>
+                <tr>
+                    <th><span>Q</span>uantité en stock</th>
+                    <td>{{ entity.qttStock }}</td>
+                </tr>
+                <tr>
+                    <th><span>S</span>euil</th>
+                    <td>{{ entity.qttSeuil }}</td>
+                </tr>
+            </table>
 
-        <a href="{{ path('stockmanager') }}">
-            <input type="button" value="retour" />
-        </a>
-        <a href="{{ path('stockmanager_edit', { 'id': entity.id }) }}">
-            <input type="button" value="modifier" />
-        </a>
-{{ form(delete_form) }}
+            <a href="{{ path('stockmanager') }}">
+                <input type="button" class="btn btn-default" value="Retour" />
+            </a>
+            <a href="{{ path('stockmanager_edit', { 'id': entity.id }) }}">
+                <input type="button" class="btn btn-default" value="Modifier" />
+            </a>
+            {{ form(delete_form) }}
+        </div>
+    </div>
+
 {% endblock %}

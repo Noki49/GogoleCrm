@@ -1,7 +1,7 @@
 gogole_main_homepage:
     path:   /
-    defaults: { _controller: GogoleMainBundle:Main:index }
+    defaults: { _controller: GogoleTodoBundle:Todo:listeTache }
 
 gogole_main_planningpage:
-    path:   /planning
+    path:   /calendar
     defaults: { _controller: GogoleMainBundle:Main:planning  }

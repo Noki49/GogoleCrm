@@ -6,12 +6,13 @@
 			{{ form_start(form) }}
 			{{ form_errors(form) }}
 			
-			<div class="form-group">
-				{{ form_label(form.message) }}
-				{{ form_widget(form.message) }}
-			</div>
-						
+				<div class="form-group">
+					<p><b><span>M</span>essage</b></p>
+					{{ form_widget(form.message) }}
+				</div>
+				
 			{{ form_end(form) }}
+						
 		</div>
 	</div>
 	<br />

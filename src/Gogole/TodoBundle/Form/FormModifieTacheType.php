@@ -17,8 +17,7 @@ class FormModifieTacheType extends AbstractType
         $builder
             ->add('tache')
             ->add('dateEcheance')
-            ->add('etat')
-            ->add('valider','submit')
+            ->add('etat')   
         ;
     }
     /**

@@ -5,17 +5,17 @@
 	<div class ="row" >
 		<div class="col-md-12">
 			<a href="{{ path('gogole_todo_creationTache') }}">
-				<button class="pull-right">
+				<button class="btn btn-default pull-right">
 					Créer une tache
 				</button>
 			</a>
 
-			<h2>Taches actuelles</h2>
+			<h2><span>T</span>aches actuelles</h2>
 			<table class="table table-hover">
 				<tr>
-					<th>Date de création</th>
-					<th>Votre tache</th>
-					<th>Date d'échéance</th>
+					<th><span>D</span>ate de création</th>
+					<th><span>V</span>otre tache</th>
+					<th><span>D</span>ate d'échéance</th>
 				</tr>
         		{% for uneTache in tache_actuelle %}
 	        		<tr>        				
@@ -35,14 +35,14 @@
 
 	       </br>	<!-- tableau des taches terminées -->
 
-			<h2>Taches terminées</h2>
+			<h2><span>T</span>aches terminées</h2>
 
 			<table class="table table-hover">
 				<tr>
-					<td>Date de création</td>
-					<td>Votre tache</td>
-					<td>Date d'échéance</td>
-					<td>Date terminées</td>
+					<th><span>D</span>ate de création</th>
+					<th><span>V</span>otre tache</th>
+					<th><span>D</span>ate d'échéance</th>
+					<th><span>D</span>ate terminées</th>
 				</tr>
         		{% for uneTache in tache_terminer %}
 	        		<tr>        				

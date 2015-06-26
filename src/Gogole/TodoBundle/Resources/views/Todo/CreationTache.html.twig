@@ -4,9 +4,20 @@
 {% block todo %}
 
 <div class="row">
-	<h2 class="text-center"> Créer une tache</h2>
+	<h2 class="text-center"><span>C</span>réer une tache</h2>
 	<div class="col-md-offset-4">
-		{{form(formulaire)}}
+		{{ form_start(formulaire) }}
+		{{ form_errors(formulaire) }}
+			<div class="form-group">
+				<p><b><span>T</span>ache </b></p>
+				{{ form_widget(formulaire.tache) }}
+			</div>
+			<div class="form-group">
+				<p><b><span>D</span>ate d'échéance </b></p>
+				{{ form_widget(formulaire.dateEcheance) }}
+			</div>
+			<input type="submit" value="Valider" class="btn btn-default" />
+		{{ form_end(formulaire) }}		
 	</div>
 
 {% endblock %}

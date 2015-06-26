@@ -6,39 +6,40 @@
               			<span class="icon-bar"></span>
               			<span class="icon-bar"></span>
             		</button>
-           		<a class="navbar-brand" href="{{path('gogole_main_homepage')}}">Gogole CRM</a>
+           		<a class="navbar-brand" href="{{path('gogole_main_homepage')}}"><span>G</span>ogole CRM</a>
          	  </div>
             <div class="collapse navbar-collapse">
           	  <ul class="nav nav-tabs">
 
-				        <li class="active"><a href="{{path('gogole_main_homepage')}}">Accueil</a></li>
+				        <li class="active"><a href="{{path('gogole_main_homepage')}}"><span>A</span>ccueil</a></li>
 
 				        <li class="dropdown">
-					         <a  data-toggle="dropdown" class="dropdown-toggle">
-                    Clients
+					         <a  data-toggle="dropdown" class="dropdown-toggle"><span>C</span>lients
                     <b class="caret"></b>
                   </a>
 
                   <ul class="dropdown-menu">
                     <li>
-                      <a href="{{path('contact_create')}}">Contacts</a>
+                      <a href="{{path('contact_create')}}"><span>C</span>ontacts</a>
                     <li>
-                      <a href="{{path('categoriecontact_create')}}">Catégories</a>
+                      <a href="{{path('categoriecontact_create')}}"><span>C</span>atégories</a>
                     </li>
                   </ul>
                   
 				        </li>
 
 				        <li>
-					        <a href="{{path('societe_create')}}">Sociétés</a>
+					        <a href="{{path('societe_create')}}"><span>S</span>ociétés</a>
 				        </li>
 
                 <li>
-					        <a href="{{path('gogole_main_planningpage')}}">Planning</a>
-				        </li>
-                <li>
-                  <a href="{{path('gogole_gestion_stock_homepage')}}"></a>
+                  <a href="{{path('stockmanager')}}"><span>G</span>estion des stocks</a>
                 </li>
+
+                <li>
+                  <a href="{{path('gogole_calendar_homepage')}}"><span>P</span>lanning</a>
+                </li>
+                
                 <li>
                   {% include'GogoleUserBundle:Layout:layout.html.twig' %}
                 </li>    
