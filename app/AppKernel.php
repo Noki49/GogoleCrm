@@ -26,7 +26,6 @@ class AppKernel extends Kernel
             new Gogole\UserBundle\GogoleUserBundle(),
             new FOS\UserBundle\FOSUserBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new BladeTester\CalendarBundle\BladeTesterCalendarBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

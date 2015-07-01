@@ -13,8 +13,4 @@ class MainController extends Controller
 
     }
 
-    public function planningAction()
-    {
-    	return $this->render('GogoleMainBundle:Main:planning.html.twig', array());
-    }
 }

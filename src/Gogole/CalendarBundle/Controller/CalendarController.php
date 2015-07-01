@@ -3,12 +3,11 @@
 namespace Gogole\CalendarBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use BladeTester\CalendarBundle\Entity\Event as BaseEvent;
 
-class CalendarController extends Controller
+class DefaultController extends Controller
 {
-    public function indexAction()
+    public function indexAction($name)
     {
-        return $this->render('GogoleCalendarBundle:Calendar:index.html.twig', array());
+        return $this->render('GogoleCalendarBundle:Calendar:calendar.html.twig', array('name' => $name));
     }
 }

@@ -3,10 +3,9 @@
 /********** Sommaire *************/
 /********** 1.Général ************/
 /********** 2.Menu ***************/
-/********** 3.Calendrier *********/
-/**********	4.Dernières action ***/
-/**********	5.Tchat **************/
-
+/**********	3.Dernières action ***/
+/**********	4.Tchat **************/
+/********** 5.Media queries ******/
 /*********************************/
 /*********************************/
 
@@ -25,55 +24,18 @@ a, h2, h1, h3, th, td {
 span {
   color: #c72425;
 }
+
+.icon-bar {
+  border: 1px solid black;
+}
+
 /* 2.Login */
 #login {
   margin-top: 20%;
 }
 
-/* 3.Calendrier */
-#calendar {
-  background-color: white;
-  border: solid 1px black;
-}
 
-#toggler {
-  position: fixed;
-  right: -2%;
-  top: 70%;
-  padding-top: 2em;
-  padding-left: 2em;
-  padding-bottom: 2em;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%; 
-  text-decoration: none;
-  z-index: 999;
-}
-
-#toggler:hover {
-  position: fixed;
-  right: 0%;
-  top: 70%;
-  padding-top: 2em;
-  padding-left: 2em;
-  padding-bottom: 2em;
-  padding-right: 1em;
-  border-top-left-radius: 15%;
-  border-bottom-left-radius: 15%; 
-  text-decoration: none;
-  z-index: 999;
-}
-
-#toggle {
-  position: fixed;
-  bottom: 0px;
-  right: 0px;
-  z-index: 998;
-  margin-right: 5%;
-  margin-bottom: 5%;
-}
-
-
-/* 4.Dernières actions */
+/* 3.Dernières actions */
 #todo {
   position: fixed;
   right: -2%;
@@ -101,7 +63,7 @@ span {
   z-index: 999;   
 }
 
-/* 5.Tchat */
+/* 4.Tchat */
 #tchat {
   position: fixed;
   right: -2%;
@@ -129,5 +91,121 @@ span {
   z-index: 999;  
 }
 
-/*** Reste à en mettre en place la suppression 
-de la messagerie en version mobile ***/
+/* 5.Media queries */
+/* Format Tablette */
+@media only screen and (max-width: 992px) and (min-width: 786px) {
+  #todo {
+    position: fixed;
+    right: -4%;
+    top: 40%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999; 
+  }
+
+  #todo:hover {
+    position: fixed;
+    right: 0%;
+    top: 40%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;   
+  }
+
+  #tchat {
+    position: fixed;
+    right: -4%;
+    top: 50%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;
+  }
+
+  #tchat:hover {
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;  
+  }
+}
+
+/* Format Smartphone */
+@media only screen and (max-width: 768px) {
+  #todo {
+    position: fixed;
+    right: -10%;
+    top: 40%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999; 
+  }
+
+  #todo:hover {
+    position: fixed;
+    right: 0%;
+    top: 40%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;   
+  }
+
+  #tchat {
+    position: fixed;
+    right: -10%;
+    top: 50%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;
+  }
+
+  #tchat:hover {
+    position: fixed;
+    right: 0%;
+    top: 50%;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-right: 1em;
+    border-top-left-radius: 15%;
+    border-bottom-left-radius: 15%; 
+    text-decoration: none;
+    z-index: 999;  
+  }
+
+  .logo {
+    margin: 0;
+  }
+}

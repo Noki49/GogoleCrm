@@ -1,6 +1,6 @@
-gogole_calendar:
+gogole_calendar_homepage:
     resource: "@GogoleCalendarBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /main/
 
 gogole_stockManager:
     resource: "@GogoleGestionStockBundle/Controller/"
@@ -57,7 +57,3 @@ fos_user_change_password:
 
 fos_js_routing:
     resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
-
-BladeTesterCalendarBundle:
-    resource: "@BladeTesterCalendarBundle/Resources/config/routing.yml"
-    prefix:   /main/

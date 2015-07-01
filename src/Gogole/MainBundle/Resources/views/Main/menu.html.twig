@@ -2,9 +2,9 @@
         <div class="container">
           	<div class="navbar-header">
             		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              			<span class="icon-bar"></span>
-              			<span class="icon-bar"></span>
-              			<span class="icon-bar"></span>
+              			<b class="icon-bar"></b>
+              			<b class="icon-bar"></b>
+              			<b class="icon-bar"></b>
             		</button>
            		<a class="navbar-brand" href="{{path('gogole_main_homepage')}}"><span>G</span>ogole CRM</a>
          	  </div>
@@ -19,7 +19,7 @@
                   </a>
 
                   <ul class="dropdown-menu">
-                    <li>
+                    <li class="">
                       <a href="{{path('contact_create')}}"><span>C</span>ontacts</a>
                     <li>
                       <a href="{{path('categoriecontact_create')}}"><span>C</span>atégories</a>
@@ -28,18 +28,18 @@
                   
 				        </li>
 
-				        <li>
+				        <li class="">
 					        <a href="{{path('societe_create')}}"><span>S</span>ociétés</a>
 				        </li>
 
-                <li>
+                <li class="">
                   <a href="{{path('stockmanager')}}"><span>G</span>estion des stocks</a>
                 </li>
-
-                <li>
+                
+                <li class="">
                   <a href="{{path('gogole_calendar_homepage')}}"><span>P</span>lanning</a>
                 </li>
-                
+
                 <li>
                   {% include'GogoleUserBundle:Layout:layout.html.twig' %}
                 </li>    

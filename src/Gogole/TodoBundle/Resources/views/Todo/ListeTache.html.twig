@@ -1,5 +1,5 @@
 
-{% extends "GogoleMainBundle:Main:layout.html.twig"%}
+{% extends "GogoleMainBundle:Main:layout.html.twig" %}
 
 {% block todo %}
 	<div class ="row" >
@@ -51,11 +51,11 @@
 			            <td><del>{{ uneTache.dateEcheance|date('d/m/Y')}}</del></td>
 			            <td><del>{{ uneTache.dateFait|date('d/m/Y')}}</del></td>
 						<td>
-							<a href="{{ path('gogole_todo_modifierTache',{id:uneTache.id}) }}"><button type="submit" class="btn btn-default">modifier</button></a>
+							<a href="{{ path('gogole_todo_modifierTache',{id:uneTache.id}) }}"><button type="submit" class="btn btn-default">Modifier</button></a>
 							
 						</td>
 						<td>
-							<a href="{{ path('gogole_todo_supprimerTache',{id:uneTache.id}) }}"><button type="submit" class="btn btn-default">supprimer</button></a>	
+							<a href="{{ path('gogole_todo_supprimerTache',{id:uneTache.id}) }}"><button type="submit" class="btn btn-default">Supprimer</button></a>	
 						</td>
 					</tr>  
       			{% endfor %}
