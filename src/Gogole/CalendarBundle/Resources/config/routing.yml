@@ -1,3 +1,3 @@
 gogole_calendar_homepage:
     path:     /calendar/
-    defaults: { _controller: GogoleCalendarBundle:Calendar:index }
+    defaults: { _controller: GogoleCalendarBundle:Calendar:calendar }

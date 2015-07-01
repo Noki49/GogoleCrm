@@ -1,7 +1,51 @@
 {% extends "GogoleMainBundle:Main:index.html.twig" %}
 
 {% block body %}
-	<h2>Calendar</h2>
+	<h2 class="Text-center"><span>P</span>lanning</h2>
+	<div class="row">
+		<div class="clol-md-offset-4">
+			{{ form_start(form) }}
+			{{ form_errors(form) }}
+
+				<div class="form-group">
+					<p><b><span>T</span>itre</b></p>
+					{{ form_widget(form.title) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>D</span>ébut</b></p>
+					{{ form_widget(form.start) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>F</span>in</b></p>
+					{{ form_widget(form.end) }}
+				</div>
+				<div class="form-group">
+					<p><b><span>D</span>escription</b></p>
+					{{ form_widget(form.description) }}
+				</div>
+				<br />
+
+				{% for allEvent in allEvent | reverse %}
+					<table class="table table-hover">
+						<tr class="active">
+							<td><h3> {{ allEvent.title}} </h3></td>
+						</tr>
+						<tr>
+							<td><h3> {{ allEvent.start}} </h3></td>
+						</tr>
+							
+						<tr>
+							<td><h3> {{ allEvent.end}} </h3></td>
+						</tr>
+						<tr>
+							<td><h3> {{ allEvent.description}} </h3></td>
+						</tr>
+					</table>
+				{% endfor %}
+			{{ form_end(form) }}
+		</div>
+	</div>
+	
 
 
-{% end block %}
+{% endblock %}
